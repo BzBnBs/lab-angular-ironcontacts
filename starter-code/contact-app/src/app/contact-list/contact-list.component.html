@@ -1,21 +1,23 @@
-<div>
-  <label for="contact-name"></label>
-  <input type="text" [(ngModel)]="newContact.name">
+<div class="form">
+  <div>
+    <label for="contact-name">Name</label>
+    <input type="text" [(ngModel)]="newContact.name">
+  </div>
+  <div>
+    <label for="contact-email">Email</label>
+    <input type="text" [(ngModel)]="newContact.email">
+  </div>
+  <div>
+    <label for="contact-phone">Phone</label>
+    <input type="text" [(ngModel)]="newContact.phoneNumber">
+  </div>
+  <div>
+    <label for="contact-image">Url image</label>
+    <input type="text" [(ngModel)]="newContact.image">
+  </div>
+  
+  <button (click)="addContact($event)">Submit New Contact</button>
 </div>
-<div>
-  <label for="contact-email"></label>
-  <input type="text" [(ngModel)]="newContact.email">
-</div>
-<div>
-  <label for="contact-phone"></label>
-  <input type="text" [(ngModel)]="newContact.phoneNumber">
-</div>
-<div>
-  <label for="contact-image"></label>
-  <input type="text" [(ngModel)]="newContact.image">
-</div>
-
-<button (click)="addContact">Submit New Contact</button>
 
 <br>
 
@@ -24,6 +26,6 @@
     <h1>{{ contact.name }}</h1>
     <h3>{{ contact.email }}</h3>
     <h5>{{ contact.phoneNumber }}</h5>
-    <img [src]="contact.image" />   
+    <img [src]="contact.image">   
   </li>
 </ul>
